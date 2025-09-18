@@ -18,10 +18,7 @@ connectDB();
 app.use(
   cors({
     credentials: true,
-    origin: [
-      "http://localhost:5173",
-      "https://swasthya-sahayak-tawny.vercel.app",
-    ],
+    origin: ["http://localhost:5173", "https://ayur-sutra-theta.vercel.app"],
   })
 );
 app.use(express.json());
