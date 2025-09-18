@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-  const { backendUrl, isLoggedIn, userData } = useContext(AppContext);
+  const { backendUrl, isLoggedIn, userData, setIsLoggedIn } = useContext(AppContext);
   const navigate = useNavigate();
 
   // Form states
@@ -61,8 +61,10 @@ const LoginPage = () => {
         if (data.success) {
           toast.success(data.message);
           clearForm();
+          setIsLoggedIn(true);
           navigate("/");
           location.reload();
+
         } else {
           toast.error(data.message);
         }
