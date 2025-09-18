@@ -43,12 +43,12 @@ const Navbar = ({ userName, onLogout }) => {
           onMouseLeave={() => setDropdownOpen(false)}
         >
           {/* Trigger */}
-          {firstName?<div className='flex items-center gap-2 bg-white text-black justify-center w-12 h-12 rounded-full hover:opacity-75 transition-all cursor-pointer bg-transparent'>
+          {setIsLoggedIn?<div className='flex items-center gap-2 bg-white text-black justify-center w-12 h-12 rounded-full hover:opacity-75 transition-all cursor-pointer bg-transparent'>
             <span className='bg-transparent text-black'>{firstName}</span>
           </div>:<Link className='border border-white px-5 hover:bg-white transition-all duration-300 hover:text-black py-3 rounded-full' to='/login'>Login</Link>}
 
           {/* Dropdown */}
-          {firstName && dropdownOpen && (
+          {setIsLoggedIn && dropdownOpen && (
             <ul className='absolute right-0 mt-10 w-48 bg-gray-900/90 backdrop-blur-md border border-white/20 rounded-xl shadow-lg text-white flex flex-col z-50'>
               <Link to='/dashboard' onClick={()=>setActiveLink("dashboard")} className='px-4 py-3 hover:bg-white/20 transition-all rounded-t-xl'>Dashboard</Link>
               <button onClick={logout} className='px-4 py-3 hover:bg-white/20 transition-all text-left rounded-b-xl'>
