@@ -11,7 +11,7 @@ const Navbar = ({ userName, onLogout }) => {
   const [activeLink, setActiveLink] = useState('home')
   const [dropdownOpen, setDropdownOpen] = useState(false)
 
-  const firstName = userData?.name.charAt(0);
+  const firstName = userData?.name.charAt(0)||"U";
 
   const logout = async () => {
     try {
