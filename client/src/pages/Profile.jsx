@@ -65,8 +65,8 @@ const Profile = () => {
       <div className='absolute w-80 h-80 rounded-full bg-red-500 blur-3xl opacity-20 bottom-20 right-20'></div>
 
       <div className='w-full px-6 md:px-10 xl:px-16 z-10'>
-        <h1 className='text-4xl font-bruno bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent'>Complete Profile</h1>
-        <p className='text-gray-400 mt-2 mb-6'>Status: {status.completed ? 'Completed' : 'Pending'} • {status.percent}%</p>
+        <h1 className='text-3xl text-center md:text-4xl font-bruno bg-gradient-to-r from-white via-blue-500  to-white bg-clip-text text-transparent'>Complete Profile</h1>
+        <p className='text-gray-400 mt-2 mb-6 text-center'>Status: {status.completed ? 'Completed' : 'Pending'} • {status.percent}%</p>
 
         {role === 'Doctor' && (
           <div className='p-6 rounded-2xl bg-gray-900/60 border border-white/10 grid grid-cols-1 md:grid-cols-2 gap-4'>

@@ -34,7 +34,7 @@ const PatientDashboard = () => {
       <div className="absolute w-80 h-80 rounded-full bg-red-500 blur-3xl opacity-20 bottom-20 right-20"></div>
 
       {/* Dashboard Title */}
-      <h1 className="text-3xl md:text-5xl font-bruno tracking-wider bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent z-10 text-center">
+      <h1 className="text-3xl md:text-5xl font-bruno tracking-wider bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent z-10 text-center px-5">
         Patient Dashboard
       </h1>
       <p className="text-gray-400 mt-3 mb-10 text-base text-justify px-5  md:text-lg md:text-center max-w-2xl bg-transparent">

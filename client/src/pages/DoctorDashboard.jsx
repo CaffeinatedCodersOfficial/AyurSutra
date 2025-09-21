@@ -123,10 +123,10 @@ const DoctorDashboard = () => {
 
       {/* Title */}
       <div className="w-full px-6 md:px-10 xl:px-16 z-10 flex justify-center items-center flex-col">
-        <h1 className="text-5xl text-center font-bruno tracking-wider bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent">
+        <h1 className="text-3xl md:text-5xl text-center font-bruno tracking-wider bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent">
           Doctor Dashboard
         </h1>
-        <p className="text-gray-400 text-center mt-3 mb-10 text-lg max-w-4xl bg-transparent">
+        <p className="text-gray-400 text-center mt-3 mb-10 text-base md:text-lg max-w-4xl bg-transparent">
           Overview of your patients, pending prescriptions, services, and recent history.
         </p>
       </div>

@@ -37,7 +37,7 @@ const DoctorServices = () => {
 
       <div className="w-full px-6 md:px-10 xl:px-16 z-10">
         <div className="flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bruno tracking-wider bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent">
+        <h1 className="text-3xl md:text-4xl font-bruno tracking-wider bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent">
           {doctor?.userId?.name || "Doctor"}
         </h1>
         <p className="text-gray-400 mt-2 mb-8 text-base bg-transparent">
