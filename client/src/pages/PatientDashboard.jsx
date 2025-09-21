@@ -34,10 +34,10 @@ const PatientDashboard = () => {
       <div className="absolute w-80 h-80 rounded-full bg-red-500 blur-3xl opacity-20 bottom-20 right-20"></div>
 
       {/* Dashboard Title */}
-      <h1 className="text-5xl font-bruno tracking-wider bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent z-10">
+      <h1 className="text-3xl md:text-5xl font-bruno tracking-wider bg-gradient-to-r from-white via-blue-500 to-white bg-clip-text text-transparent z-10 text-center">
         Patient Dashboard
       </h1>
-      <p className="text-gray-400 mt-3 mb-10 text-lg text-center max-w-2xl bg-transparent">
+      <p className="text-gray-400 mt-3 mb-10 text-base text-justify px-5  md:text-lg md:text-center max-w-2xl bg-transparent">
         Manage your health journey — book consultations, view records, track prescriptions,
         and stay updated with your doctors and healthcare services in one place.
       </p>
@@ -56,7 +56,7 @@ const PatientDashboard = () => {
         {/* Upcoming Appointments */}
         <div className="p-6 rounded-2xl bg-gray-900/60 backdrop-blur-md border border-white/10 shadow-lg">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-2xl font-michroma bg-transparent">Upcoming Appointments</h3>
+            <h3 className="text-lg md:text-2xl font-michroma bg-transparent">Upcoming Appointments</h3>
             <FaCalendarCheck className="text-blue-400 text-3xl bg-transparent" />
           </div>
           <ul className="space-y-3">
@@ -73,7 +73,7 @@ const PatientDashboard = () => {
         {/* Past Appointments */}
         <div className="p-6 rounded-2xl bg-gray-900/60 backdrop-blur-md border border-white/10 shadow-lg">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-2xl font-michroma bg-transparent">Past Appointments</h3>
+            <h3 className="text-lg md:text-2xl font-michroma bg-transparent">Past Appointments</h3>
             <FaCalendarCheck className="text-green-400 text-3xl bg-transparent" />
           </div>
           <ul className="space-y-3">
@@ -90,7 +90,7 @@ const PatientDashboard = () => {
         {/* Prescriptions CTA */}
         <div className="p-6 rounded-2xl bg-gray-900/60 backdrop-blur-md border border-white/10 shadow-lg">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-2xl font-michroma bg-transparent">Prescriptions</h3>
+            <h3 className="text-lg md:text-2xl font-michroma bg-transparent">Prescriptions</h3>
             <FaFilePrescription className="text-yellow-400 text-3xl bg-transparent" />
           </div>
           <p className="text-gray-400 text-sm mb-3">View your prescriptions from completed consultations.</p>

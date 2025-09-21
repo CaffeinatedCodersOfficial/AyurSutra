@@ -10,6 +10,7 @@ import serviceRouter from "./routes/service.routes.js";
 import profileRouter from "./routes/profile.routes.js";
 import appointmentRouter from "./routes/appointment.routes.js";
 import prescriptionRouter from "./routes/prescription.routes.js";
+import aiRouter from "./routes/ai.routes.js";
 
 const app = express();
 const PORT = process.env.PORT || 4000;
@@ -35,6 +36,7 @@ app.use("/api", serviceRouter);
 app.use("/api", profileRouter);
 app.use("/api", appointmentRouter);
 app.use("/api", prescriptionRouter);
+app.use("/api/ai", aiRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}`);
