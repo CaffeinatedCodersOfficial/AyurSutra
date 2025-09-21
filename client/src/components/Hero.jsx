@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import dnaimage from "../../public/dnaimage.png";
 import axios from "axios";
+import { AppContext } from '../context/AppContext';
 
 const Hero = () => {
+  const {backendUrl}  = useContext(AppContext);
   const [problem, setProblem] = useState("");
   const [sufferingSince, setSufferingSince] = useState("");
   const [loading, setLoading] = useState(false);
@@ -16,7 +18,7 @@ const Hero = () => {
     setResponseData(null);
 
     try {
-      const res = await axios.post("http://localhost:4000/api/ai/ask", {
+      const res = await axios.post(backendUrl+"/api/ai/ask", {
         problem,
         sufferingSince
       });
