@@ -7,7 +7,7 @@ export const AppContext = createContext();
 axios.defaults.withCredentials = true; // always send cookies
 
 export const AppContextProvider = ({ children }) => {
-  const backendUrl = "https://ayursutra.onrender.com";
+  const backendUrl = "https://ayursutra-1-22g4.onrender.com";
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState(null);
@@ -37,8 +37,8 @@ export const AppContextProvider = ({ children }) => {
       const { data } = await axios.get(`${backendUrl}/api/auth/is-auth`);
       if (data.success) {
         setIsLoggedIn(true);
-        await fetchUserData(); 
-        
+        await fetchUserData();
+
         // fetch user data only if logged in
       } else {
         setIsLoggedIn(false);
@@ -53,7 +53,6 @@ export const AppContextProvider = ({ children }) => {
       setLoading(false);
     }
   };
-
 
   // Run once on mount
   useEffect(() => {
@@ -73,8 +72,6 @@ export const AppContextProvider = ({ children }) => {
   };
 
   return (
-    <AppContext.Provider value={contextValue}>
-      {children}
-    </AppContext.Provider>
+    <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
   );
 };
