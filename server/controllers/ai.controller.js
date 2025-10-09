@@ -12,7 +12,7 @@ export const askAi = async (req, res) => {
         .json({ error: "Please provide problem and sufferingSince" });
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const prompt = `
 You are a helpful medical assistant.
@@ -38,7 +38,7 @@ Always add: "⚠️ This is not medical advice. Please consult a doctor."
     const structuredResponse = {
       expectedCauses: [],
       importantThingsToDo: [],
-      disclaimer: ""
+      disclaimer: "",
     };
 
     let currentSection = null;
@@ -54,7 +54,9 @@ Always add: "⚠️ This is not medical advice. Please consult a doctor."
       } else if (trimmed.startsWith("⚠️")) {
         structuredResponse.disclaimer = trimmed;
       } else if (trimmed.startsWith("-") && currentSection) {
-        structuredResponse[currentSection].push(trimmed.replace("-", "").trim());
+        structuredResponse[currentSection].push(
+          trimmed.replace("-", "").trim()
+        );
       }
     });
 

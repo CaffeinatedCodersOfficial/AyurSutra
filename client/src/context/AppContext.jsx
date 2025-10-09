@@ -7,7 +7,7 @@ export const AppContext = createContext();
 axios.defaults.withCredentials = true; // always send cookies
 
 export const AppContextProvider = ({ children }) => {
-  const backendUrl = "https://ayursutra-1-22g4.onrender.com";
+  const backendUrl = "http://localhost:4000";
 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userData, setUserData] = useState(null);
